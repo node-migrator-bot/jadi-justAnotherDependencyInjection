@@ -60,7 +60,7 @@ exports.GlobalBinder = function(utils){
 				if(!hasJs){
 					abPath = abPath+".js";
 				}
-				if(path.existsSync(abPath)){
+				if(fs.existsSync(abPath)){
 					var clazz = moduleClazz[1];
 					return this.load(abPath,context)[clazz];
 				}
